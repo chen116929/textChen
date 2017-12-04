@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title></title> 
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript"> 
+
+</script> 
+</head> 
+<body> 
+<button disabled="disabled" id="b1">下(10)载</button>
+</body>
+<script type="text/javascript"> 
+	var a = 10;
+	
+	function changeNum(){
+		a -- ;
+		if(a > -1){
+			$('#b1').text('下('+a+')载');
+		}else{
+			$('#b1').text('下载');
+			$('#b1').removeAttr('disabled');
+			$('#b1').on('click', function(){
+				alert('开始下载');
+			})
+		}
+	}
+		setInterval(changeNum, 1000);
+</script> 
+</html> 
